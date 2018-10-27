@@ -14,6 +14,10 @@ end
     redirect_to product_path(@product)
   end
 
+  def show
+    @product = Product.find_by_id(params[:id])
+  end
+
   def body
     product = Product.find(params[:id])
     render plain: product.description
