@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :orders
   resources :invoices
   resources :products
+
+  get'/products/:id/body', to: 'products#body'
 end
